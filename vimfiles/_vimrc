@@ -176,7 +176,7 @@ set title
 " ファイル操作に関する設定:
 "
 " バックアップファイルを作成しない (次行の先頭の " を削除すれば有効になる)
-"set nobackup
+set nobackup
 
 
 "---------------------------------------------------------------------------
@@ -246,8 +246,25 @@ endif
 
 " Copyright (C) 2009-2018 KaoriYa/MURAOKA Taro
 
+"====================================================================
+" vimのユーザー設定
+"indent tab設定
+set autoindent
+"タブ文字の幅
+"この値は変更しないこと。普通はタブの幅は8文字だ
+set tabstop=8
+"タブキーを押下したときに入力するスペースの数
+set softtabstop=2
+"<<,>>コマンドやautoindentでシフトさせる幅
+set shiftwidth=2
+"タブ文字入力時にスペースに変換する
+set expandtab
+"====================================================================
 
-"追加
+
+
+"====================================================================
+"プラグイン追加
 "Vundle
    set nocompatible              " be iMproved, required
    filetype off                  " required
@@ -292,3 +309,5 @@ endif
    "
    " see :h vundle for more details or wiki for FAQ
    " Put your non-Plugin stuff after this line
+
+
